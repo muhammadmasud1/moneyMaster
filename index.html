@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moneymaster.com</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body>
+   <div class="flex justify-center items-center mt-6"> <img class="lg:w-[20%] md:w-[20%]  sm:w-[20%] object-cover bg-cover" src="img/Money Master💰.png"
+             alt="Picture"></div>
+
+       <section id="moneyMasterContainer" class=" lg:w-[90%] md:w-[90%]  md:h-auto  lg:h-auto  mx-auto grid lg:grid-cols-2 md:grid-cols-2
+       sm:grid-cols-1 sm:h-[50%]  sm:w-[50%] gap-12 mt-4">
+            <div><img src="img/banner.png" class="object-cover bg-cover w-full  h-[85vh] rounded-lg" alt="banner Picture">
+            </div>
+
+            <div class="bg-[#F8F8F8] rounded-[15px]">
+                 <h2 class="text-center text-2xl font-bold mt-2 text-[#35A6AD]">Income</h2>
+                 <div class="text-center mt-5"> 
+                  
+                         <label for="number" class="text-2xl me-4 text-slate-600">Income :</label>
+                        <input id="incomeID" type="number" placeholder="Total Amount" 
+                        class="input input-bordered  w-[90%] h-[2.2rem] max-w-xs" />
+                       <!--=========  income design end ===========-->
+                 <h2 class="text-center text-2xl font-bold mt-4 text-[#35A6AD]">Expenses</h2>
+                 <div class="text-center mt-5"> 
+
+                         <label for="number" class="text-2xl me-4 text-slate-600">food :</label>
+                        <input id="food" type="number" placeholder="Enter Your Amount" 
+                        class="input input-bordered  w-[90%] h-[2.2rem] max-w-xs" />
+
+                        <div class="py-4">
+                        <label for="number" class="text-2xl me-4 text-slate-600">Rent :</label>
+                        <input id="rent" type="number" placeholder="Enter Your Amount" 
+                        class="input input-bordered  w-[90%] h-[2.2rem] max-w-xs" />
+                        </div>
+
+                        <div>
+                        <label for="number" class="text-2xl me-4 text-slate-600">Cloth:</label>
+                        <input id="cloth"  type="number" placeholder="Enter Your Amount" 
+                        class="input input-bordered  w-[90%] h-[2.2rem] max-w-xs" id="number" />
+                        </div>           
+            </div>
+               <div class="text-center mt-7">
+                        <button class="btn btn-lg  bg-[#35A7AE] sm:btn-lg md:btn-lg 
+                        lg:btn-md" onclick="calculatorExpensesAndIncome()" >Calculator</button>  
+               </div>
+            </div>
+             
+              <div id="calculatorCount" class="text-center mt-4">
+                        <h3 class="text-[17px] text-zinc-700 font-semibold">Total Expenses: <span id="totalExpenses">0.00</span>Tk</h3>
+                        <h3 class="text-[17px] text-zinc-700 font-semibold">Balance: <span id="remainingBalance">0.00</span>Tk</h3>
+              </div>
+                <div class="flex justify-center gap-6 items-center mt-6">
+                      <p>Save :</p>
+                      <input id="saveMoney"  type="number"  
+                      class="input input-bordered w-[20%] bg-slate-200 h-[2.2rem]"> 
+                      <p>%</p> 
+                      <button class="btn btn-sm  bg-[#35A7AE]"  onclick="saveMoneyAmount()">Save</button>  
+                </div>
+                <div id="remainingAmount" class="text-center mt-4">
+                        <h3 class="text-[17px] text-zinc-700 font-semibold">Saving Amount: <span id="savingAmount">0.00</span>Tk</h3>
+                        <h3 class="text-[17px] text-zinc-700 font-semibold">Remaining Balance: <span id="remainingSubtraction">0.00</span>Tk</h3>
+              </div>
+            </div>
+       </section>     
+       
+       
+       <script src="app.js"></script>
+</body>
+</html>
